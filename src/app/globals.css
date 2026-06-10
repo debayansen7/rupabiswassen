@@ -1,0 +1,293 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-on-primary: var(--on-primary);
+  --color-primary-container: var(--primary-container);
+  --color-on-primary-container: var(--on-primary-container);
+  --color-secondary: var(--secondary);
+  --color-on-secondary: var(--on-secondary);
+  --color-secondary-container: var(--secondary-container);
+  --color-on-secondary-container: var(--on-secondary-container);
+  --color-tertiary: var(--tertiary);
+  --color-on-tertiary: var(--on-tertiary);
+  --color-tertiary-container: var(--tertiary-container);
+  --color-on-tertiary-container: var(--on-tertiary-container);
+  --color-surface: var(--surface);
+  --color-on-surface: var(--on-surface);
+  --color-surface-variant: var(--surface-variant);
+  --color-on-surface-variant: var(--on-surface-variant);
+  --color-outline: var(--outline);
+  --color-outline-variant: var(--outline-variant);
+  --color-surface-container: var(--surface-container);
+  --color-surface-container-lowest: var(--surface-container-lowest);
+  --color-surface-container-low: var(--surface-container-low);
+  --color-surface-container-high: var(--surface-container-high);
+  --color-surface-container-highest: var(--surface-container-highest);
+  --color-surface-bright: var(--surface-bright);
+  --color-surface-dim: var(--surface-dim);
+  --color-error: var(--error);
+  --color-on-error: var(--on-error);
+  --color-error-container: var(--error-container);
+  --color-on-error-container: var(--on-error-container);
+
+  --font-display: var(--font-display-family);
+  --font-body: var(--font-body-family);
+  --font-label: var(--font-label-family);
+
+  --spacing-margin-desktop: 80px;
+  --spacing-section-gap: 160px;
+  --spacing-gutter: 32px;
+  --spacing-unit: 8px;
+  --spacing-container-max: 1440px;
+  --spacing-margin-mobile: 24px;
+}
+
+/* Base Styles */
+:root, .theme-gold {
+  --background: #131313;
+  --foreground: #e5e2e1;
+  --primary: #e9c176;
+  --on-primary: #412d00;
+  --primary-container: #c5a059;
+  --on-primary-container: #4e3700;
+  --secondary: #c2c6d8;
+  --on-secondary: #2b303e;
+  --secondary-container: #424655;
+  --on-secondary-container: #b0b5c6;
+  --tertiary: #c9c6c2;
+  --on-tertiary: #31302d;
+  --tertiary-container: #a7a5a1;
+  --on-tertiary-container: #3b3b38;
+  --surface: #131313;
+  --on-surface: #e5e2e1;
+  --surface-variant: #353534;
+  --on-surface-variant: #d1c5b4;
+  --outline: #9a8f80;
+  --outline-variant: #4e4639;
+  --surface-container: #201f1f;
+  --surface-container-lowest: #0e0e0e;
+  --surface-container-low: #1c1b1b;
+  --surface-container-high: #2a2a2a;
+  --surface-container-highest: #353534;
+  --surface-bright: #3a3939;
+  --surface-dim: #131313;
+  --error: #ffb4ab;
+  --on-error: #690005;
+  --error-container: #93000a;
+  --on-error-container: #ffdad6;
+
+  --font-display-family: var(--font-bodoni-moda);
+  --font-body-family: var(--font-hanken-grotesk);
+  --font-label-family: var(--font-hanken-grotesk);
+}
+
+.theme-ruby {
+  --background: #121414;
+  --foreground: #e2e2e2;
+  --primary: #ffb77b;
+  --on-primary: #4d2700;
+  --primary-container: #c8803f;
+  --on-primary-container: #432100;
+  --secondary: #f7b7b3;
+  --on-secondary: #4d2423;
+  --secondary-container: #683a38;
+  --on-secondary-container: #e4a6a2;
+  --tertiary: #ffb3ae;
+  --on-tertiary: #581c1b;
+  --tertiary-container: #ce7975;
+  --on-tertiary-container: #4f1615;
+  --surface: #121414;
+  --on-surface: #e2e2e2;
+  --surface-variant: #333535;
+  --on-surface-variant: #d8c3b4;
+  --outline: #a08d80;
+  --outline-variant: #524439;
+  --surface-container: #1e2020;
+  --surface-container-lowest: #0c0f0f;
+  --surface-container-low: #1a1c1c;
+  --surface-container-high: #282a2b;
+  --surface-container-highest: #333535;
+  --surface-bright: #38393a;
+  --surface-dim: #121414;
+  --error: #ffb4ab;
+  --on-error: #690005;
+  --error-container: #93000a;
+  --on-error-container: #ffdad6;
+
+  --font-display-family: var(--font-bodoni-moda);
+  --font-body-family: var(--font-manrope);
+  --font-label-family: var(--font-manrope);
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body-family), Arial, sans-serif;
+  transition: background-color 0.8s cubic-bezier(0.25, 1, 0.5, 1), color 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Horizontal scroll container (Desktop only) */
+@media (min-width: 768px) {
+  .horizontal-container {
+    display: flex;
+    width: 400vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    perspective: 1600px;
+    perspective-origin: 50% 50%;
+    transform-style: preserve-3d;
+    transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
+  }
+  .section {
+    width: 100vw;
+    height: 100vh;
+    flex-shrink: 0;
+    position: relative;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, opacity;
+  }
+
+  /* Parallax Layer Helpers */
+  .parallax-bg-text {
+    transition: transform 1.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 1.6s ease;
+    will-change: transform, opacity;
+  }
+  .parallax-portrait {
+    transition: transform 1.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 1.4s ease;
+    will-change: transform, opacity;
+  }
+  .parallax-content {
+    transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 1.2s ease;
+    will-change: transform, opacity;
+  }
+}
+
+/* Vertical scroll on mobile */
+@media (max-width: 767px) {
+  .horizontal-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .section {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+
+  /* Fix bg watermark text to stay subtle like desktop */
+  .parallax-bg-text {
+    opacity: 0.04;
+  }
+
+  /* Mobile entrance animations — fire once via IntersectionObserver */
+  .mobile-fade-up {
+    opacity: 0;
+    transform: translateY(2rem);
+    transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .mobile-fade-up.delay-1 {
+    transition-delay: 0.15s;
+  }
+  .mobile-fade-up.delay-2 {
+    transition-delay: 0.3s;
+  }
+  .mobile-fade-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animations */
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.turntable-playing {
+  animation: rotate 12s linear infinite;
+}
+
+.glass-nav {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.tilt-card {
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  transform-style: preserve-3d;
+}
+
+.tilt-card:hover {
+  transform: perspective(1000px) rotateX(2deg) rotateY(-2deg) scale(1.02);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 2px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 9999px;
+}
+
+.ruby-gradient {
+  background: linear-gradient(135deg, #2D0B0B 0%, #121414 100%);
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #1A1F2C 0%, #0D0D0D 100%);
+}
+
+.ruby-gradient-2 {
+  background: linear-gradient(160deg, #1A0A0A 0%, #121414 60%, #0C1010 100%);
+}
+
+.gold-gradient-2 {
+  background: linear-gradient(160deg, #101618 0%, #131313 60%, #0F1208 100%);
+}
+
+.ruby-gradient-3 {
+  background: linear-gradient(200deg, #121414 0%, #1E0C0C 50%, #121414 100%);
+}
+
+.gold-gradient-3 {
+  background: linear-gradient(200deg, #131313 0%, #141A10 50%, #131313 100%);
+}
+
+.ruby-gradient-4 {
+  background: linear-gradient(225deg, #0C0F0F 0%, #1A0808 60%, #0C0F0F 100%);
+}
+
+.gold-gradient-4 {
+  background: linear-gradient(225deg, #0D0D0D 0%, #101520 60%, #0D0D0D 100%);
+}
+
+/* Hide scrollbar completely on scrolling page */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

@@ -1,0 +1,199 @@
+{
+  "artist": {
+    "name": "Rupa Biswas Sen",
+    "roles": {
+      "gold": "Classical Fusion Sitarist",
+      "ruby": "International Soloist"
+    },
+    "portraitUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuDXIHqFJXpNwtFP0KjOV1psSNfYIlQid51mM48_ny0786MfuTpDJdPLnR8EDXhHWviIHTYVlKd35Y4sUeA4Y3HNqEotDgRi0rwSfzPRkYkBB2W4ma9WTjT-RnhoPMoQHU3TpwBCU-5vxJXZiO7XxssPrMh2gs6hBZlhYQ5WXVd8B0u3ZpVfZd1e0wePkHFYe1vbJWIC81Ky7JRg7tZaulYucKBofaI8BSbTsgJgCJ_0b7cp3A8Cy2pkNk7EJRQbwvnbIj4dzYjKOaKh"
+  },
+  "themes": {
+    "gold": {
+      "name": "Serene Resonance",
+      "heroTitleMain": "Harmonizing Tradition with the",
+      "heroTitleItalic": "Ethereal",
+      "heroSubtitle": "An immersive journey through the sacred echoes of Hindustani classical, redefined for the contemporary soul.",
+      "heroCta1": "Her Story",
+      "heroCta2": "Connect",
+      "colors": {
+        "primary": "#e9c176",
+        "primaryContainer": "#c5a059",
+        "background": "#131313",
+        "surface": "#131313",
+        "onSurface": "#e5e2e1"
+      }
+    },
+    "ruby": {
+      "name": "Ruby & Copper",
+      "heroTitleMain": "Rupa",
+      "heroTitleItalic": "Biswas Sen",
+      "heroSubtitle": "Merging classical heritage with contemporary soundscapes. A journey through the soul of avant-garde composition.",
+      "heroCta1": "Her Story",
+      "heroCta2": "Connect",
+      "colors": {
+        "primary": "#ffb77b",
+        "primaryContainer": "#c8803f",
+        "background": "#121414",
+        "surface": "#121414",
+        "onSurface": "#e2e2e2"
+      }
+    }
+  },
+  "discography": {
+    "title": "Echoes of the Eternal",
+    "subtitle": "Curated compositions blending centuries-old ragas with ambient textures.",
+    "sectionLabel": "Discography Preview",
+    "musicPageLabel": "Discography & Auditory Space",
+    "revivalLinkLabel": "Her Revival Story",
+    "technicalNote": {
+      "title": "Technical Sitar Configurations",
+      "body": "Rupa Biswas Sen records with a custom-engineered maharaj-style copper sitar tuned to 440Hz for fusion integration, using heavy copper strings for deep resonance in lower octaves (kharaj). Ambient pads are captured using analog oscillators triggered directly through vibration sensors mounted on the gourd (tumba)."
+    },
+    "tracks": [
+      {
+        "id": "track-1",
+        "title": "Morning Alaap",
+        "album": "Echoes of the Eternal",
+        "raga": "Bhairav - The Dawn Raga",
+        "duration": "08:42",
+        "durationSeconds": 522,
+        "src": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+        "cover": "https://lh3.googleusercontent.com/aida-public/AB6AXuALC3PWhfDGc6brC5Y9QuUVzsMf2mwLcrfbBXlE2ypYFhOZzRr4mByP7DGD4Hra41Yhq__c7jL4EyURZY5BwDwrbUKIOqSiLwGStCxfQNvUW5mSC7S4PLFQlLCaCkxixtxMZaQMf2heFbXKpI9iPjDQucA6GjkyJugSnYr0ujRIpLtgpTLKKVLnt1c-Il7JkIwz2z_DjeP6gSI_1CCJtbua3Uay0mI0DVnZx-3oekAS-bz5CXTRiCkrtteLkOEUcBgjOvzGyDMtLn_2",
+        "ragaMood": "Spiritual, Pristine, Meditative",
+        "ragaTiming": "Dawn / Sunrise",
+        "ragaDescription": "Raga Bhairav is a foundational morning raga of Hindustani classical music. It invokes the quiet, sacred clarity of the waking earth, characterized by its deep, resonant notes that ground the modern mind in spiritual peace."
+      },
+      {
+        "id": "track-2",
+        "title": "Indigo Sky",
+        "album": "Echoes of the Eternal",
+        "raga": "Yaman - Twilight Melodies",
+        "duration": "12:15",
+        "durationSeconds": 735,
+        "src": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+        "cover": "https://lh3.googleusercontent.com/aida-public/AB6AXuCnKxIEhI5VTTy0uc7JbHHGHp-HWiBHkzCaHVt6WiKSwocjI8mWbSoy-GRG2gNNV7vJ9DzkvCcnd45S65YbrCPaMjSTHdEvDPTcKpCR1bJZQRosQRJZpPtqKbjvLrsof5QrJJq-ymmlIbnlDIlBOFO_CY4ce5eGoyyFXLEuJNzF5WxYoczCUdGR-iJQ1H7pa4wK6AL7dEVt6QWhF5q0FY5lTOBMwNEo3GeaQjvj7MrOlqjZxuFgsKMszNEYNxeZqJVToehN6D-fcNgy",
+        "ragaMood": "Devotional, Serene, Graceful",
+        "ragaTiming": "Twilight / Sunset",
+        "ragaDescription": "Raga Yaman is an evening raga that exudes peace, warmth, and grace. The sitar strings trace delicate paths of light and shadow, capturing the transition from the busy daytime to the calm solemnity of night."
+      },
+      {
+        "id": "track-3",
+        "title": "Desert Monologue",
+        "album": "Echoes of the Eternal",
+        "raga": "Marwa - The Solitary Path",
+        "duration": "07:58",
+        "durationSeconds": 478,
+        "src": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
+        "cover": "https://lh3.googleusercontent.com/aida-public/AB6AXuAm_4HgT_TIY4OU3Zi2lzqIM7DhfMccsMWl_4qqO016eE-p_q-4npCVNExdJcdo7C_v2bxIt0Mb39W10-7inRL9dgNjRarkfG4a9q5HhfMMVaXMLDaT83ehhTCP91JZm7sThw3wBrvwdPCFcC-gIYCriIbfXiADQxArH9aw_59y-jnmwXsmOclKEhuDjd3gBKZb3xHyzbqvTsJbq9OzNsCQW_Ty--FkrNxLTygezn0awpFt6T6g7RUNpA8rNspc9AZXr60zWqIMtU_I",
+        "ragaMood": "Contemplative, Longing, Haunting",
+        "ragaTiming": "Late Afternoon / Dusk",
+        "ragaDescription": "Raga Marwa is a powerful raga of intense self-reflection. It portrays a solitary journey of the soul, combining ambient cello drone textures with sharp sitar bends that evoke the vastness of a shifting desert landscape."
+      },
+      {
+        "id": "track-4",
+        "title": "Copper Strings",
+        "album": "Sitar Fusion Single",
+        "raga": "Bhairavi - Rhythmic Strings",
+        "duration": "05:10",
+        "durationSeconds": 310,
+        "src": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3",
+        "cover": "https://lh3.googleusercontent.com/aida-public/AB6AXuBXo0OE9E4iDlSQk1TwsP8bcitj41MtIyXC8MJ8wzdxxfvPP6D8sUhT0PuPsaZVvpM0pD7ioUUYjJX5bzI66MOMDGfIMTIFiBq0IulYvY8okuPl_6GAyOEEauQdR-h8iI04WMo8pFW9Z_QSwVMumy_AtKHMjBfns1Ueb-l5djSJmoi-8fyIRzU2toLWT5jbZNJQzO6NljubEGONX0Zua6VBnC5Pyfndv3x-F2Gv2jJ5YTr-1dPpYp-aMu-WlvHrLe5ygsWT25Hx2B2W",
+        "ragaMood": "Poignant, Soulful, Universal",
+        "ragaTiming": "Concert Finale / Anytime",
+        "ragaDescription": "Raga Bhairavi is traditionally played at the close of a Hindustani concert. It encapsulates the deep grace of surrender, integrating faster rhythmic fusion percussion that leaves listeners in a state of absolute universal harmony."
+      },
+      {
+        "id": "track-5",
+        "title": "Velvet Nocturne",
+        "album": "Echoes of the Eternal",
+        "raga": "Darbari - Late Night Ambient",
+        "duration": "09:30",
+        "durationSeconds": 570,
+        "src": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3",
+        "cover": "https://lh3.googleusercontent.com/aida-public/AB6AXuD7u-a53uXHo6RgtymwzvfFphXxBANkbspRD93Lx_1B2uXfcl55_WqqsvlqXSuUhW9Rsht5VLJRDJky_0EJnXnC3JtReWK4yD2uP-t6GbWKD79AODaQQ1YZD0S3ee8peO7liQn2FW5rM89vPPje8-L2fmZmbhANw_0e9MamqVGigUyXd5qH1zj8Xkptdh6b5gwBhLtXpa-D7UzY-c1DkPwCjTejdYNb3v1kke0vcM6gS9PNVqc76EHuDw8IqmbhDA_wtfG1IGMrI03Y",
+        "ragaMood": "Majestic, Solemn, Deeply Reflective",
+        "ragaTiming": "Late Night",
+        "ragaDescription": "Raga Darbari Kannada is a late-night raga of royal heritage, slow-moving and deeply dignified. It utilizes heavy, vibrating microtones (andolans) to paint a velvet-like nocturne of intense emotional depth and quiet strength."
+      }
+    ]
+  },
+  "gallery": {
+    "title": "The Artist in Motion",
+    "subtitle": "Visual Archives and stage collections from tours.",
+    "sectionLabel": "Visual Journey",
+    "viewAllLabel": "View All Photos",
+    "items": [
+      {
+        "id": "gal-1",
+        "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuAZfwaDFqOOV5YMb2iZU5YYh-vVgzPwLZg0b_jqZIap3yTPslMjbqwLsQeM1hPLTjMETTc9y-z4Sm1soHFB4kcHiwW8WVuDjXbp7TuZJgD_4uX0D00IZq4_GOhBkjAp3jMNRCPGPsXS1qs4-y7__LAuWi4SRE3MftzRdxxaCDy_xKJ_uUbm-8cRWbxz5pdYrjf-V_okM7_jX9wi_Uky8LfP6JjVXY0jvk1HAznOkED82QvZljGbnGRE_8_sXo0BY2ALs0jdX7Okf5OG",
+        "imageAlt": "Rupa Biswas Sen performing in London Concert Hall",
+        "title": "The Grand Hall, London",
+        "description": "A stellar performance fusing classical sitar techniques with ambient strings, witnessed by thousands of classical and contemporary fusion enthusiasts. The high-contrast, amber spotlights highlighted the rigid classical roots in a modern grand setting."
+      },
+      {
+        "id": "gal-2",
+        "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuBhMCjtLZeJ-3hVSVPTM_5gHpZRRPhS91eEV0vqutEyUlNwInyFy8MIPwwNAGx3owlfA3ixRGunZNt_104gg5zuftsHj0EzKtlIs2osAAP3QkerODqmb-SQ_GeULN9yFFEjGgobkfv0IiM9Paczx2nVNrMjORgS-6vWcyB1L14qJ4NFTpOno4935clpnnsVIf200dBby_lIrHRVm8BxgcQCL7GOfUJk9qR9zZGiEsM-Q6RYCwG_Znvh84WlpK5lbRzfvjOKYLs1lC_L",
+        "imageAlt": "Graceful sitar strings in Milan recordings",
+        "title": "Studio Sessions",
+        "description": "An intimate, highly technical close-up of Rupa Sen tracing structural notations and playing custom copper sitar strings. Captured during her deep, creative recording periods in Milan, representing high-fidelity focus and grace."
+      },
+      {
+        "id": "gal-3",
+        "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuD16LklSazJlUUgIy55urPlDtM5NmbV8fyV2Wlvg65XcJTuxkGbABhfmZs71MM-e1wQsJKKX6FPKJgQZ5TlNZNNp59yhoP4VZYD4aGnh-aWV5yCyjSwAgiUJotjVN4lPL46trPXMgvHKYQnw6nqKRRCWq8yINVKPhNDoTe6qD31hX1T7273SoOc67c_ps0QxDvkVsd4hf9tOK00XxlwOA-1qKVkyYj5d7f4kOvaGa97RCEOK_iiyVfc9-kgNVPexYB4ZOuc4SjnTqe_",
+        "imageAlt": "Minimalist sheet music and pen in studio",
+        "title": "Composing Silence",
+        "description": "A premium, minimalist studio arrangement featuring handwritten sheet music, sitar frets, and ink writing on a velvety dark surface. It maps the visual silence between notes, echoing organic classical composition paths."
+      },
+      {
+        "id": "gal-4",
+        "imageSrc": "https://lh3.googleusercontent.com/aida-public/AB6AXuARDJmfRnF2pX8ZNLsVnBLTJxbmph67T2aB6C8kUY3n8jSuXRiADZtoAl2MOdKIiz-mUBWnpT08z02vUoB8YvG9sloeSEVHIAsGoOk55so7-bnR7_wJARvr5gNnDJ4LL7HuqfV6hOXAgYudF0tye5MWyK84saO3_OOzA7q9uXMuhNluXql0y7uof5VVvlg2SEEGXx994mcqY8OV-Lj8INlw9oX11RYh4QB06uCXD63dwhDuvD6g1-QQORav4NQ7iE1A0lo5FWtQTAS0",
+        "imageAlt": "Dimmed auditorium concert stage lights",
+        "title": "Soul Resonance",
+        "description": "The master artist looking out at a dimmed, silent theater, surrounded by rich red hues and warm copper lens flares. Represents the shared spiritual connection between performer and listener."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Let's Connect",
+    "subtitle": "Available for global stages, commissions, and collaborations.",
+    "email": "contact@rupabiswassen.com",
+    "social": "@rupabiswassen_official",
+    "inquiryCategories": [
+      "Concert Stage Booking",
+      "Artistic Fusion Collaboration",
+      "Press & General Inquiries"
+    ]
+  },
+  "news": {
+    "title": "Latest News",
+    "subtitle": "Announcements, releases, and upcoming milestones.",
+    "sectionLabel": "Announcements",
+    "items": [
+      {
+        "id": "news-1",
+        "date": "2024-12-15",
+        "category": "Release",
+        "headline": "Velvet Nocturne Added to Global Playlists",
+        "body": "The latest single from Echoes of the Eternal has been curated into top classical fusion playlists across Spotify and Apple Music, reaching over 200,000 listeners worldwide."
+      },
+      {
+        "id": "news-2",
+        "date": "2024-11-28",
+        "category": "Performance",
+        "headline": "Sold-Out Night at Royal Albert Hall",
+        "body": "An unforgettable evening of sitar fusion left audiences in awe at London's Royal Albert Hall, featuring a world-premiere composition and special guest appearances."
+      },
+      {
+        "id": "news-3",
+        "date": "2024-10-10",
+        "category": "Collaboration",
+        "headline": "New Studio Sessions with Ustad Aashish Khan",
+        "body": "Recording has begun on a new fusion project revisiting the sounds of the legendary 1982 Disco Jazz sessions — reimagined for a new generation of listeners."
+      }
+    ]
+  },
+  "footer": {
+    "built_by": "Designed and Built with ❤️ by Debayan Sen.",
+    "buildByLink": "https://www.debayansen.com"
+  }
+}
