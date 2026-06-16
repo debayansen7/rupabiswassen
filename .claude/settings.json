@@ -4,7 +4,9 @@
       "Bash(git -C \"c:\\\\Users\\\\debay\\\\Debayan-Data\\\\Work Area\\\\1. FRONTEND\\\\1. REACTJS + REACT Native\\\\2. Projects\\\\1. Portfolio\\\\3. Rupa Sen\" status)",
       "Bash(git -C \"c:\\\\Users\\\\debay\\\\Debayan-Data\\\\Work Area\\\\1. FRONTEND\\\\1. REACTJS + REACT Native\\\\2. Projects\\\\1. Portfolio\\\\3. Rupa Sen\" log --oneline -5)",
       "Bash(git -C \"c:\\\\Users\\\\debay\\\\Debayan-Data\\\\Work Area\\\\1. FRONTEND\\\\1. REACTJS + REACT Native\\\\2. Projects\\\\1. Portfolio\\\\3. Rupa Sen\" diff --cached)",
-      "Bash(git -C \"c:\\\\Users\\\\debay\\\\Debayan-Data\\\\Work Area\\\\1. FRONTEND\\\\1. REACTJS + REACT Native\\\\2. Projects\\\\1. Portfolio\\\\3. Rupa Sen\" add -A)"
+      "Bash(git -C \"c:\\\\Users\\\\debay\\\\Debayan-Data\\\\Work Area\\\\1. FRONTEND\\\\1. REACTJS + REACT Native\\\\2. Projects\\\\1. Portfolio\\\\3. Rupa Sen\" add -A)",
+      "Bash(git -C 'c:\\\\Users\\\\debay\\\\Debayan-Data\\\\Work Area\\\\1. FRONTEND\\\\1. REACTJS + REACT Native\\\\2. Projects\\\\1. Portfolio\\\\3. Rupa Sen' commit -m ' *)",
+      "Bash(git -C \"c:\\\\Users\\\\debay\\\\Debayan-Data\\\\Work Area\\\\1. FRONTEND\\\\1. REACTJS + REACT Native\\\\2. Projects\\\\1. Portfolio\\\\3. Rupa Sen\" push origin main)"
     ]
   }
 }
