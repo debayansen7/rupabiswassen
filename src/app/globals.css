@@ -220,8 +220,13 @@ body {
   to { transform: rotate(360deg); }
 }
 
-.turntable-playing {
+.turntable-record {
   animation: rotate 12s linear infinite;
+  animation-play-state: paused;
+}
+
+.turntable-record.turntable-playing {
+  animation-play-state: running;
 }
 
 .glass-nav {

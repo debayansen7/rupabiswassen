@@ -1,10 +1,8 @@
 "use client";
 
 import React, { useEffect } from "react";
-import { usePathname } from "next/navigation";
 import { useAppSelector } from "@/store";
 import ErrorBoundary from "@/components/ErrorBoundary";
-import AudioPlayer from "@/components/AudioPlayer";
 
 interface ThemeWrapperProps {
   children: React.ReactNode;
@@ -12,7 +10,6 @@ interface ThemeWrapperProps {
 
 export default function ThemeWrapper({ children }: ThemeWrapperProps) {
   const activeTheme = useAppSelector((state) => state.theme.activeTheme);
-  const pathname = usePathname();
 
   useEffect(() => {
     const root = document.documentElement;
@@ -25,18 +22,5 @@ export default function ThemeWrapper({ children }: ThemeWrapperProps) {
     }
   }, [activeTheme]);
 
-  const showPlayer = pathname === "/music";
-
-  return (
-    <ErrorBoundary>
-      {children}
-      <div
-        className={`transition-all duration-700 ease-in-out ${
-          showPlayer
-            ? "opacity-100 translate-y-0 pointer-events-auto"
-            : "opacity-0 translate-y-24 pointer-events-none"
-        }`}
-      ></div>
-    </ErrorBoundary>
-  );
+  return <ErrorBoundary>{children}</ErrorBoundary>;
 }

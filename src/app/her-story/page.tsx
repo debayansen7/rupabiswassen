@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { useAppSelector } from "@/store";
 import Navbar from "@/components/Navbar";
 import ParallaxBackground from "@/components/ParallaxBackground";
@@ -8,7 +9,6 @@ import Footer from "@/components/Footer";
 
 export default function HerStoryPage() {
   const activeTheme = useAppSelector((state) => state.theme.activeTheme);
-  const portfolioData = useAppSelector((state) => state.portfolio);
 
   return (
     <>
@@ -30,7 +30,7 @@ export default function HerStoryPage() {
               Her Story
             </h1>
             <p className="font-body text-sm sm:text-base md:text-lg text-on-surface-variant max-w-3xl leading-relaxed">
-              From early musical training through the iconic Disco Jazz era, this is the story of an artist's vision, innovation, and journey.
+              From early musical training through the iconic Disco Jazz era, this is the story of an artist&rsquo;s vision, innovation, and journey.
             </p>
           </div>
 
@@ -46,7 +46,7 @@ export default function HerStoryPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
                 <p className="font-body text-base text-on-surface-variant leading-relaxed">
-                  Rupa Biswas Sen's musical journey began in her early years, immersed in the rich traditions of Hindustani classical music. Her dedication to the craft was evident as she pursued formal education in music, eventually completing her Master's degree (MA) in Music.
+                  Rupa Biswas Sen&rsquo;s musical journey began in her early years, immersed in the rich traditions of Hindustani classical music. Her dedication to the craft was evident as she pursued formal education in music, eventually completing her Master&rsquo;s degree (MA) in Music.
                 </p>
                 <p className="font-body text-base text-on-surface-variant leading-relaxed">
                   Her early career saw her establish herself as a recognized vocalist, earning recognition through All India Radio where she successfully auditioned and performed. This was the foundation of a promising classical music career, deeply rooted in tradition and excellence.
@@ -75,28 +75,28 @@ export default function HerStoryPage() {
                   In 1981, Rupa traveled to Calgary, Canada on a family visit. There, she connected with a visionary group of musicians, including the legendary Ustad Aashish Khan on sarod. Together, they conceived something revolutionary: a fusion of Indian classical music with disco, jazz, and funk.
                 </p>
                 <p className="font-body text-base text-on-surface-variant leading-relaxed">
-                  At Calgary's Living Room Studios in 1982, they recorded what would become the iconic "Disco Jazz" album. Four tracks that blended East and West seamlessly:
+                  At Calgary&rsquo;s Living Room Studios in 1982, they recorded what would become the iconic &ldquo;Disco Jazz&rdquo; album. Four tracks that blended East and West seamlessly:
                 </p>
                 <ul className="space-y-3 font-body text-base text-on-surface-variant">
                   <li className="flex items-start gap-3">
                     <span className="text-primary font-bold mt-1">•</span>
-                    <span><strong>"Moja Bhari Moja"</strong> - An explosive opening</span>
+                    <span><strong>&ldquo;Moja Bhari Moja&rdquo;</strong> - An explosive opening</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-primary font-bold mt-1">•</span>
-                    <span><strong>"East West Shuffle"</strong> - The bridge between worlds</span>
+                    <span><strong>&ldquo;East West Shuffle&rdquo;</strong> - The bridge between worlds</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-primary font-bold mt-1">•</span>
-                    <span><strong>"Aaj Shanibar"</strong> - A contemplative moment</span>
+                    <span><strong>&ldquo;Aaj Shanibar&rdquo;</strong> - A contemplative moment</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-primary font-bold mt-1">•</span>
-                    <span><strong>"Ayee Morshume Be-Reham Duniya"</strong> - The profound closing</span>
+                    <span><strong>&ldquo;Ayee Morshume Be-Reham Duniya&rdquo;</strong> - The profound closing</span>
                   </li>
                 </ul>
                 <p className="font-body text-base text-on-surface-variant leading-relaxed">
-                  The album represented something ahead of its time—a genuine fusion, not a novelty. Rupa's voice, backed by sarod, guitar, drums, and keyboards, created something that was simultaneously classical and contemporary, Indian and international.
+                  The album represented something ahead of its time—a genuine fusion, not a novelty. Rupa&rsquo;s voice, backed by sarod, guitar, drums, and keyboards, created something that was simultaneously classical and contemporary, Indian and international.
                 </p>
               </div>
             </div>
@@ -113,7 +113,7 @@ export default function HerStoryPage() {
 
             <div className="bg-surface-container/50 border border-outline-variant/15 rounded-lg p-8 space-y-6">
               <p className="font-body text-base text-on-surface-variant leading-relaxed">
-                After 1982, Rupa sold only a handful of copies of "Disco Jazz" and then disappeared from public view. There was no social media, no viral moments, no streaming platforms. The album faded into obscurity, known only to a small circle of music enthusiasts and collectors.
+                After 1982, Rupa sold only a handful of copies of &ldquo;Disco Jazz&rdquo; and then disappeared from public view. There was no social media, no viral moments, no streaming platforms. The album faded into obscurity, known only to a small circle of music enthusiasts and collectors.
               </p>
               <p className="font-body text-base text-on-surface-variant leading-relaxed">
                 For nearly four decades, her groundbreaking work remained virtually unknown to the world. The artist who had envisioned a revolutionary fusion of classical and contemporary music retreated from the spotlight, her vision seemingly lost to time.
@@ -151,7 +151,7 @@ export default function HerStoryPage() {
               <div className="p-6 bg-surface-container/40 rounded-lg border border-outline-variant/15 space-y-4">
                 <h3 className="font-display text-2xl text-primary">Timeless</h3>
                 <p className="font-body text-sm text-on-surface-variant leading-relaxed">
-                  40 years later, "Disco Jazz" sounds neither dated nor derivative. It remains a testament to music that speaks beyond era and genre.
+                  40 years later, &ldquo;Disco Jazz&rdquo; sounds neither dated nor derivative. It remains a testament to music that speaks beyond era and genre.
                 </p>
               </div>
             </div>
@@ -160,7 +160,7 @@ export default function HerStoryPage() {
           {/* Quote Section */}
           <section className="mb-24 py-16 px-8 bg-surface-container/60 border border-outline-variant/15 rounded-lg text-center space-y-6">
             <p className="font-display text-3xl text-on-surface italic font-light leading-relaxed">
-              "An artist's vision is never truly lost. It waits, preserved in the grooves of vinyl, ready to speak to a generation that finally understands."
+              &ldquo;An artist&rsquo;s vision is never truly lost. It waits, preserved in the grooves of vinyl, ready to speak to a generation that finally understands.&rdquo;
             </p>
             <p className="font-label text-xs text-primary uppercase tracking-widest font-bold">
               The Disco Jazz Legacy
@@ -176,18 +176,18 @@ export default function HerStoryPage() {
               Dive into the complete Disco Jazz album and discover why this music continues to inspire, influence, and move audiences worldwide.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a
-                href="/"
+              <Link
+                href="/music"
                 className="px-8 py-3.5 border border-primary text-primary font-label text-xs tracking-widest uppercase hover:bg-primary hover:text-on-primary transition-all duration-500 rounded cursor-pointer shadow-sm hover:shadow-[0_4px_20px_rgba(233,193,118,0.15)] active:scale-95 inline-block"
               >
                 Listen to the Album
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/her-revival"
                 className="px-8 py-3.5 bg-surface-container hover:bg-surface-container-high border border-outline-variant/30 text-on-surface font-label text-xs tracking-widest uppercase transition-all duration-300 rounded cursor-pointer active:scale-95 inline-block"
               >
                 The Revival Story →
-              </a>
+              </Link>
             </div>
           </section>
         </div>

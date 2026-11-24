@@ -12,13 +12,14 @@ import {
 
 export default function AudioPlayer() {
   const dispatch = useAppDispatch();
-  const { playing, activeTrackIndex, progress, volume, tracks } = useAppSelector(
+  const { playing, activeTrackIndex, progress, volume, tracks, hasStarted } = useAppSelector(
     (state) => state.audio
   );
   const currentTrack = tracks[activeTrackIndex];
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [duration, setDuration] = useState(0);
+  const [expanded, setExpanded] = useState(false);
 
   // Initialize and handle source audio updates
   useEffect(() => {
@@ -62,6 +63,7 @@ export default function AudioPlayer() {
       audio.removeEventListener('canplay', onCanPlay);
       audio.pause();
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentTrack, dispatch]);
 
   // Handle Play/Pause triggers
@@ -111,35 +113,60 @@ export default function AudioPlayer() {
     dispatch(setVolume(newVolume));
   };
 
-  return (
-    <div className="fixed bottom-0 left-0 w-full z-50 h-24 bg-surface-container/90 backdrop-blur-2xl border-t border-outline-variant/10 shadow-[0_-8px_40px_rgba(0,0,0,0.4)]">
-      <div className="flex justify-between items-center px-4 sm:px-margin-desktop h-full max-w-container-max mx-auto gap-4">
-        
-        {/* Track Details */}
-        <div className="flex items-center gap-4 w-1/3 md:w-1/4">
-          <div className="w-12 h-12 bg-outline-variant/20 overflow-hidden rounded-md border border-outline-variant/20 flex-shrink-0 hidden sm:block">
-            <img
-              alt={currentTrack.title}
-              className="w-full h-full object-cover"
-              src={currentTrack.cover}
-            />
-          </div>
-          <div className="min-w-0">
-            <p className="font-label text-[9px] text-primary tracking-widest uppercase font-semibold">
-              Now Playing
-            </p>
-            <p className="font-body text-xs md:text-sm text-on-surface font-semibold truncate max-w-[120px] sm:max-w-[160px]">
-              {currentTrack.title}
-            </p>
-            <p className="font-body text-[10px] text-on-surface-variant/70 truncate hidden md:block">
-              {currentTrack.raga}
-            </p>
-          </div>
-        </div>
+  // Stay out of the way entirely until the visitor has actually pressed play somewhere
+  if (!hasStarted) return null;
 
-        {/* Central Controls */}
-        <div className="flex-1 max-w-xl flex flex-col items-center gap-1">
-          <div className="flex items-center gap-6">
+  return (
+    <div
+      className={`fixed bottom-5 right-5 z-50 rounded-2xl bg-surface-container/90 backdrop-blur-2xl border border-outline-variant/15 shadow-[0_8px_32px_rgba(0,0,0,0.35)] transition-all duration-300 ${
+        expanded ? 'w-[calc(100vw-2.5rem)] sm:w-96 p-4' : 'w-16 h-16 p-0'
+      }`}
+    >
+      {!expanded ? (
+        <button
+          onClick={() => setExpanded(true)}
+          aria-label="Expand music preview player"
+          className="relative w-16 h-16 rounded-2xl overflow-hidden group"
+        >
+          <img
+            alt={currentTrack.title}
+            className="w-full h-full object-cover"
+            src={currentTrack.cover}
+          />
+          <span className="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-black/55 transition-colors">
+            <span className="material-symbols-outlined text-white text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>
+              {playing ? 'pause_circle' : 'play_circle'}
+            </span>
+          </span>
+        </button>
+      ) : (
+        <div className="space-y-3">
+          {/* Header row */}
+          <div className="flex items-center justify-between gap-3">
+            <div className="flex items-center gap-3 min-w-0">
+              <div className="w-10 h-10 rounded-md overflow-hidden border border-outline-variant/20 flex-shrink-0">
+                <img alt={currentTrack.title} className="w-full h-full object-cover" src={currentTrack.cover} />
+              </div>
+              <div className="min-w-0">
+                <p className="font-label text-[9px] text-primary tracking-widest uppercase font-semibold">
+                  Preview Clip
+                </p>
+                <p className="font-body text-xs text-on-surface font-semibold truncate">
+                  {currentTrack.title}
+                </p>
+              </div>
+            </div>
+            <button
+              onClick={() => setExpanded(false)}
+              aria-label="Collapse player"
+              className="text-on-surface-variant hover:text-primary transition-colors flex-shrink-0"
+            >
+              <span className="material-symbols-outlined text-xl">close</span>
+            </button>
+          </div>
+
+          {/* Controls */}
+          <div className="flex items-center justify-center gap-6">
             <button
               onClick={() => dispatch(prevTrack())}
               className="text-on-surface-variant hover:text-primary transition-colors active:scale-90"
@@ -150,7 +177,7 @@ export default function AudioPlayer() {
               onClick={handlePlayToggle}
               className="text-primary hover:scale-110 active:scale-95 transition-all"
             >
-              <span className="material-symbols-outlined text-4xl font-fill" style={{ fontVariationSettings: "'FILL' 1" }}>
+              <span className="material-symbols-outlined text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>
                 {playing ? 'pause_circle' : 'play_circle'}
               </span>
             </button>
@@ -164,49 +191,47 @@ export default function AudioPlayer() {
 
           {/* Scrubber Timeline */}
           <div className="w-full flex items-center gap-3 px-1">
-            <span className="font-label text-[10px] text-on-surface-variant w-10 text-right select-none">
+            <span className="font-label text-[10px] text-on-surface-variant w-9 text-right select-none">
               {formatTime(progress)}
             </span>
-            <div className="flex-1 relative flex items-center group">
-              <input
-                type="range"
-                min="0"
-                max={duration || 100}
-                value={progress}
-                onChange={handleProgressChange}
-                className="w-full h-[3px] rounded-full appearance-none cursor-pointer bg-outline-variant/30 accent-primary focus:outline-none"
-                style={{
-                  background: `linear-gradient(to right, var(--primary) ${
-                    (progress / (duration || 100)) * 100
-                  }%, var(--outline-variant) ${(progress / (duration || 100)) * 100}%)`,
-                }}
-              />
-            </div>
-            <span className="font-label text-[10px] text-on-surface-variant w-10 text-left select-none">
+            <input
+              type="range"
+              min="0"
+              max={duration || 100}
+              value={progress}
+              onChange={handleProgressChange}
+              className="flex-1 h-[3px] rounded-full appearance-none cursor-pointer bg-outline-variant/30 accent-primary focus:outline-none"
+              style={{
+                background: `linear-gradient(to right, var(--primary) ${
+                  (progress / (duration || 100)) * 100
+                }%, var(--outline-variant) ${(progress / (duration || 100)) * 100}%)`,
+              }}
+            />
+            <span className="font-label text-[10px] text-on-surface-variant w-9 text-left select-none">
               {formatTime(duration || currentTrack.durationSeconds)}
             </span>
           </div>
-        </div>
 
-        {/* Volume controls */}
-        <div className="flex items-center justify-end gap-3 w-1/3 md:w-1/4">
-          <span className="material-symbols-outlined text-on-surface-variant text-lg">
-            {volume === 0 ? 'volume_off' : volume < 0.5 ? 'volume_down' : 'volume_up'}
-          </span>
-          <input
-            type="range"
-            min="0"
-            max="1"
-            step="0.01"
-            value={volume}
-            onChange={handleVolumeChange}
-            className="w-16 sm:w-20 md:w-24 h-[3px] rounded-full appearance-none cursor-pointer bg-outline-variant/30 accent-primary focus:outline-none"
-            style={{
-              background: `linear-gradient(to right, var(--primary) ${volume * 100}%, var(--outline-variant) ${volume * 100}%)`,
-            }}
-          />
+          {/* Volume */}
+          <div className="flex items-center gap-3">
+            <span className="material-symbols-outlined text-on-surface-variant text-lg">
+              {volume === 0 ? 'volume_off' : volume < 0.5 ? 'volume_down' : 'volume_up'}
+            </span>
+            <input
+              type="range"
+              min="0"
+              max="1"
+              step="0.01"
+              value={volume}
+              onChange={handleVolumeChange}
+              className="flex-1 h-[3px] rounded-full appearance-none cursor-pointer bg-outline-variant/30 accent-primary focus:outline-none"
+              style={{
+                background: `linear-gradient(to right, var(--primary) ${volume * 100}%, var(--outline-variant) ${volume * 100}%)`,
+              }}
+            />
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }

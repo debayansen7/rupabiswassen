@@ -28,7 +28,7 @@ export default function Turntable() {
         <div className="absolute inset-6 bg-surface-container-lowest rounded-full border-4 border-outline-variant/10 shadow-2xl flex items-center justify-center">
           {/* Vinyl Record */}
           <div
-            className={`absolute inset-4 bg-zinc-950 rounded-full border-[0.5px] border-zinc-800 flex items-center justify-center overflow-hidden transition-transform duration-[12000ms] ${
+            className={`absolute inset-4 bg-zinc-950 rounded-full border-[0.5px] border-zinc-800 flex items-center justify-center overflow-hidden turntable-record ${
               playing ? 'turntable-playing' : ''
             }`}
             style={{

@@ -2,8 +2,8 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { useAppSelector } from "@/store";
-import { useTheme } from "@/hooks/useTheme";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
+import { useWindowWidth } from "@/hooks/useWindowWidth";
 import ParallaxBackground from "@/components/ParallaxBackground";
 import GalleryModal from "@/components/GalleryModal";
 import Navbar from "@/components/Navbar";
@@ -22,7 +22,6 @@ interface GalleryItem {
 }
 
 export default function HomePage() {
-  const { activeTheme } = useTheme();
   useIntersectionObserver();
   const portfolioData = useAppSelector((state) => state.portfolio);
 
@@ -30,7 +29,7 @@ export default function HomePage() {
 
   // State for horizontal scroll active index and window size
   const [activeSection, setActiveSection] = useState(0);
-  const [windowWidth, setWindowWidth] = useState(0);
+  const windowWidth = useWindowWidth();
 
   // Scroll/gesture ref accumulators
   const accumulatedDeltaRef = useRef(0);
@@ -40,14 +39,6 @@ export default function HomePage() {
 
   // Lightbox Modal state
   const [selectedPhoto, setSelectedPhoto] = useState<GalleryItem | null>(null);
-
-  // Set window width safely on mount
-  useEffect(() => {
-    setWindowWidth(window.innerWidth);
-    const handleResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   // Handle wheel, keyboard, and touch swipe transitions
   useEffect(() => {

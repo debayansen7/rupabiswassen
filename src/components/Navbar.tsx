@@ -9,6 +9,13 @@ export default function Navbar() {
   const pathname = usePathname();
   const { activeTheme, toggleTheme } = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [prevPathname, setPrevPathname] = useState(pathname);
+
+  // Close drawer on route change (state adjustment during render, not an effect)
+  if (pathname !== prevPathname) {
+    setPrevPathname(pathname);
+    setMenuOpen(false);
+  }
 
   const navItems = [
     { name: 'Home', href: '/' },
@@ -17,11 +24,6 @@ export default function Navbar() {
     { name: 'Gallery', href: '/gallery' },
     { name: 'Contact', href: '/contact' },
   ];
-
-  // Close drawer on route change
-  useEffect(() => {
-    setMenuOpen(false);
-  }, [pathname]);
 
   // Escape key closes drawer; lock body scroll while open
   useEffect(() => {

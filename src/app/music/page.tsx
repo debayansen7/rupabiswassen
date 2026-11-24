@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useAppDispatch, useAppSelector } from "@/store";
 import {
   togglePlay,
@@ -64,6 +64,9 @@ export default function MusicPage() {
             </h1>
             <p className="font-body text-sm sm:text-base md:text-lg text-on-surface-variant max-w-2xl leading-relaxed">
               {portfolioData.discography.subtitle}
+            </p>
+            <p className="font-label text-[11px] text-on-surface-variant/60 uppercase tracking-widest">
+              Short preview clips shown below &mdash; full recordings available on streaming platforms.
             </p>
           </div>
 
